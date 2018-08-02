@@ -1,0 +1,25 @@
+{
+  "name": "n8-calendar",
+  "version": "1.0.0",
+  "description": "n8-calendar | UI Devs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MazzoniG/n8-calendar.git"
+  },
+  "author": "Guillermo E. Mazzoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MazzoniG/n8-calendar/issues"
+  },
+  "homepage": "https://github.com/MazzoniG/n8-calendar#readme",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "chalk": "^2.4.1",
+    "date-holidays": "^1.2.6",
+    "express": "^4.16.3"
+  }
+}
