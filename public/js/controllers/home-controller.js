@@ -1,12 +1,8 @@
-angular.module('HomeCtrl', []).controller('HomeController', function($scope, $rootScope, $location, $compile, uiCalendarConfig, Services) {
+angular.module('HomeCtrl', []).controller('HomeController', function($scope, $rootScope, $location, $compile, uiCalendarConfig, moment, Services) {
 
 	$rootScope.renderCalendar = false;
 
 	$scope.eventSources = [];
-
-	//$scope.startDate = new Date();
-	//$scope.country = "US";
-	//$scope.numberOfDays = 0;
 
 	$scope.uiConfig = {
 		calendar: {
@@ -21,11 +17,24 @@ angular.module('HomeCtrl', []).controller('HomeController', function($scope, $ro
 	};
 
 	$scope.render = function() {
+
 		$rootScope.renderCalendar = true;
 
-		Services.getHolidays($scope.country).then(function(holidays) { //Holidays Endpoint 
-			console.log(holidays);
-		});
-	};
+		$scope.startDate = moment($scope.startDate);
 
+		$scope.startDate = $scope.startDate.format('YYYY-MM-DD');
+		$scope.endDate = moment($scope.startDate).add($scope.numberOfDays, 'days').format('YYYY-MM-DD');
+
+		var dateRange = { start: $scope.startDate, end: $scope.endDate };
+
+		console.log('___DateRange___\n', dateRange);
+
+		$scope.uiConfig.calendar.validRange = dateRange;
+
+		Services.getHolidays($scope.country).then(function(holidays) { 
+			console.log('___Holidays___\n', holidays);
+		});
+
+	};
+	
 })
