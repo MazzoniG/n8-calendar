@@ -1,0 +1,25 @@
+{
+  "name": "n8-calendar",
+  "description": "n8-calendar | UI Devs",
+  "main": "server.js",
+  "authors": [
+    "Guillermo E. Mazzoni"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MazzoniG/n8-calendar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-animate": "^1.7.2",
+    "angular-aria": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.3",
+    "angular-material": "^1.1.10"
+  }
+}

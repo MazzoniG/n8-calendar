@@ -1,0 +1,23 @@
+<div class="jumbotron text-center" ng-controller="HomeController">
+    <h3 class="md-display">CALENDAR</h3>
+    <br/ >
+
+    <md-card-content>
+      <div layout="row">
+      	<md-input-container>
+      		<md-datepicker ng-model="startDate" md-placeholder="Start date" md-min-date="" md-week-days=true></md-datepicker>
+      	</md-input-container>	
+        <md-input-container>
+          <label>Number of Days</label>
+          <input ng-model="numberOfDays">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Country</label>
+          <input ng-model="country">
+        </md-input-container>
+		</div>
+	<md-card-content>    
+	<md-button class="md-raised md-primary" ng-click="">Render</md-button>	
+
+</div>
