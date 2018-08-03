@@ -18,8 +18,8 @@
         </md-input-container>
 		</div>
 	<md-card-content>    
-	<md-button class="md-raised md-primary" ng-click="">Render</md-button>	
+	<md-button class="md-raised md-primary" ng-disabled="!(startDate && numberOfDays)" ng-click="render()">Render</md-button>	
 </div>
-<div>
-	<div ui-calendar ng-model=""></div>
+<div ng-if="renderCalendar">
+	<div ui-calendar="uiConfig.calendar" class="calendar" ng-model="eventSources" calendar="myCalendar"></div>
 </div>
